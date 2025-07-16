@@ -63,23 +63,35 @@
                             <div class="header-contact-info">
                                 <ul>
                                     <li>
-                                        <a href="tel:+01-977-2599-12"><i class="fas fa-phone-alt"></i> +01 (977) 2599 12</a>
+                                        <a href="tel:<?php echo get_field('phone_no_1', 'option'); ?>"><i class="fas fa-phone-alt"></i> <?php echo get_field('phone_no_1', 'option'); ?></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="0c6f63617c6d62754c6863616d6562226f6361">info@loremipsum.com</span></a>
+                                        <a href="mailto:<?php echo get_field('email_address', 'option'); ?>"><i class="fas fa-envelope"></i> <?php echo get_field('email_address', 'option'); ?></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-4 d-flex justify-content-lg-end justify-content-between">
-                            <ul class="nav-links d-flex align-items-center gap-3 mb-0">
+                            <!-- <ul class="nav-links d-flex align-items-center gap-3 mb-0">
                                 <li><a href="#" class="text-white">Notice</a></li>
                                 <li><a href="gallery.html" class="text-white">Events</a></li>
                                 <li><a href="#" class="text-white">Download</a></li>
                                 <li><a href="#" class="text-white">Publication</a></li>
                                 <li><a href="contact.html" class="text-white">Contact</a></li>
                                 <li><a href="blog-archive.html" class="text-white">Blog</a></li>
-                            </ul>
+                            </ul> -->
+                            <?php
+                                wp_nav_menu( array(
+                                    'theme_location'    => 'top_menu',
+                                    'container'     => '',
+                                    'menu_id' => false,
+                                    'menu_class'        => 'nav-links d-flex align-items-center gap-3 mb-0', 
+                                    'echo'          => true,
+                                    'items_wrap'        => '<ul class="%2$s">%3$s</ul>',
+                                    'depth'         => 10,
+                                    'walker'        => new top_nav_menu
+                                ) );
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -90,13 +102,13 @@
                         <div class="site-identity col-lg-2">
                             <p class="site-title">
                                 <a href="index.html">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/assets/img/educator-logo1.png" alt="logo">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/educator-logo1.png" alt="logo">
                                 </a>
                             </p>
                         </div>
                         <div class="main-navigation col-lg-10 justify-content-between d-flex align-items-center">
                             <nav id="navigation" class="navigation d-none d-lg-inline-block">
-                                <ul>
+                                <!-- <ul>
                                     <li class="menu-item-has-children">
                                         <a href="about.html">About CEPE</a>
                                         <ul>
@@ -115,7 +127,6 @@
                                         </ul>
                                     </li>
                                     <li class="">
-                                        <!-- current-menu-item -->
                                         <a href="#">Committee</a>
                                     </li>
                                     <li class="menu-item-has-children">
@@ -163,7 +174,19 @@
                                             </li>
                                         </ul>
                                     </li>
-                                </ul>
+                                </ul> -->
+                                <?php
+                                    wp_nav_menu( array(
+                                        'theme_location'    => 'main_menu',
+                                        'container'     => '',
+                                        'menu_id' => false,
+                                        'menu_class'        => '', 
+                                        'echo'          => true,
+                                        'items_wrap'        => '<ul class="%2$s">%3$s</ul>',
+                                        'depth'         => 10,
+                                        'walker'        => new main_nav_menu
+                                    ) );
+                                ?>
                             </nav>
                             <div class="header-btn d-inline-block">
                                 <a href="#" class="button-round-secondary">Online Form Fillup</a>

@@ -140,7 +140,7 @@ endif;
 
 
 // nav menu start
-class desktop_nav_menu extends Walker_Nav_Menu {
+class top_nav_menu extends Walker_Nav_Menu {
 
 	// add classes to ul sub-menus
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
@@ -185,20 +185,112 @@ class desktop_nav_menu extends Walker_Nav_Menu {
 			}
 		}
 
-		$liClassDropdown = 'nav-item';
-		$aTagClass = 'nav-link';
+		$liClassDropdown = '';
+		$aTagClass = 'text-white';
 		$aTagdataToogle = '';
 		$liextra = '';
 		$liUnderDropdownClass = '';
 
 		if( in_array($item->ID, $parents ) ) {
-			$liClassDropdown = ( $depth == 0 ? 'nav-item' : '' );
-			$aTagClass = ( $depth == 0 ? 'nav-link dropdown-toggle' : 'dropdown-item' );
-			$aTagdataToogle = 'data-bs-toggle="dropdown" aria-expanded="false"';
+			// $liClassDropdown = ( $depth == 0 ? 'nav-item' : '' );
+			// $aTagClass = ( $depth == 0 ? 'nav-link dropdown-toggle' : 'dropdown-item' );
+			// $aTagdataToogle = 'data-bs-toggle="dropdown" aria-expanded="false"';
 			// $liextra = ( $depth == 0 ? 'id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"' : '' );
 		}else{
-			$liClassDropdown = ( $depth > 0 ? '' : 'nav-item' );
-			$aTagClass = ( $depth > 0 ? 'dropdown-item' : 'nav-link' );
+			// $liClassDropdown = ( $depth > 0 ? '' : 'nav-item' );
+			// $aTagClass = ( $depth > 0 ? 'dropdown-item' : 'nav-link' );
+			// $liUnderDropdownClass = ( $depth == 0 ? '' : 'dropdown-item' );
+		}
+
+	    // build html
+	    $output .= $indent . '<li class="' . $class_names . ' ' . $depth_class_names . ' ' . $liClassDropdown . ' ' . $liUnderDropdownClass . '" '. $liextra .'>';
+	  
+	    // link attributes
+	    $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+	    $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+	    $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+	    $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+		$attributes .= 'class="' . $aTagClass . '" ' . $aTagdataToogle . '';
+	    $attributes .= ' class="' . ( $depth > 0 ? 'menu-button' : '' ) . '"';
+	    $item_output = $args->before;
+        $item_output .= '<a'. $attributes .'>';
+	  	$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+	  	$item_output .= '</a>';
+        $item_output .= $args->after;
+	   	/* $item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
+	        $args->before,
+	        $attributes,
+	        $args->link_before,
+	        apply_filters( 'the_title', $item->title, $item->ID ),
+	        $args->link_after,
+	        $args->after
+	    );*/
+	    // build html
+	    $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id );
+	}
+}
+
+
+// nav menu start
+class main_nav_menu extends Walker_Nav_Menu {
+
+	// add classes to ul sub-menus
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
+	    // depth dependent classes
+	    $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
+	    $display_depth = ( $depth + 1); // because it counts the first submenu as 0
+	    $classes = array(
+	        'menu-item-has-children'
+	    );
+	    $class_names = implode( ' ', $classes );
+	  
+	    // build html
+	    $output .= "\n" . $indent . '<ul role="menu" class="' . $class_names . '">' . "\n";
+	}
+	  
+	// add main/sub classes to li's and links
+	function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+	    global $wp_query;
+	    $indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
+		  $class_names = $value = '';
+	        //$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+	        $class_names = in_array("current_page_item",$item->classes) ? '' : '';
+			$class_names1 = in_array("current-menu-ancestor",$item->classes) ? '' : '';
+	        //$class_names1 = in_array("current_page_item",$item->menu_item_children->classes) ? ' active' : '';
+	    // depth dependent classes
+	    $depth_classes = array(
+	        ( $depth == 0 ? '' : '' ),$class_names,$class_names1
+	    );
+	    $depth_class_names = esc_attr( implode( ' ', $depth_classes ) );
+	  
+	    // passed classes
+	    $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+	    $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
+	  
+	    $parents = array();
+		if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $args->theme_location ] ) ) {
+			$menu = wp_get_nav_menu_object( $locations[ $args->theme_location ] );
+			$menu_items = wp_get_nav_menu_items($menu->term_id);
+			foreach( $menu_items as $menu_item ) {
+			  	if( $menu_item->menu_item_parent != 0 )
+			    	$parents[] = $menu_item->menu_item_parent;
+			}
+		}
+
+		$liClassDropdown = '';
+		$aTagClass = '';
+		$aTagdataToogle = '';
+		$liextra = '';
+		$liUnderDropdownClass = '';
+
+		if( in_array($item->ID, $parents ) ) {
+			// $liClassDropdown = ( $depth == 0 ? 'nav-item' : '' );
+			// $aTagClass = ( $depth == 0 ? 'nav-link dropdown-toggle' : 'dropdown-item' );
+			// $aTagdataToogle = 'data-bs-toggle="dropdown" aria-expanded="false"';
+			// $liextra = ( $depth == 0 ? 'id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"' : '' );
+		}else{
+			// $liClassDropdown = ( $depth > 0 ? '' : 'nav-item' );
+			// $aTagClass = ( $depth > 0 ? 'dropdown-item' : 'nav-link' );
 			// $liUnderDropdownClass = ( $depth == 0 ? '' : 'dropdown-item' );
 		}
 
@@ -254,8 +346,8 @@ class footer_nav_menu extends Walker_Nav_Menu {
 	    $indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
 		  $class_names = $value = '';
 	        //$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-	        $class_names = in_array("current_page_item",$item->classes) ? 'current' : '';
-			$class_names1 = in_array("current-menu-ancestor",$item->classes) ? 'current' : '';
+	        $class_names = in_array("current_page_item",$item->classes) ? '' : '';
+			$class_names1 = in_array("current-menu-ancestor",$item->classes) ? '' : '';
 	        //$class_names1 = in_array("current_page_item",$item->menu_item_children->classes) ? ' active' : '';
 	    // depth dependent classes
 	    $depth_classes = array(
@@ -325,7 +417,8 @@ add_action( 'after_setup_theme', 'td_setup' );
 
 function td_setup() {
 	register_nav_menus( array(
-		'desktop_menu' => 'Main Menu',
+		'top_menu' => 'Top Menu',
+		'main_menu' => 'Main Menu',
 		'footer_menu' => 'Footer Menu',
 		'footer_menu1' => 'Footer Menu 1',
 		// 'service_menu' => 'Service Page Menu',

@@ -24,69 +24,18 @@ get_header();
             <div class="gallery-section">
                 <div class="container">
                     <div class="gallery-container">
-                        <div class="single-gallery">
-                            <figure class="gallery-img">
-                                <a href="assets/img/educator-img12.jpg" data-fancybox="gallery">
-                                    <img src="assets/img/educator-img12-500px.jpg" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="single-gallery">
-                            <figure class="gallery-img">
-                                <a href="assets/img/educator-img13.jpg" data-fancybox="gallery">
-                                    <img src="assets/img/educator-img13-500px.jpg" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="single-gallery">
-                            <figure class="gallery-img">
-                                <a href="assets/img/educator-img14.jpg" data-fancybox="gallery">
-                                    <img src="assets/img/educator-img14-500px.jpg" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="single-gallery">
-                            <figure class="gallery-img">
-                                <a href="assets/img/educator-img15.jpg" data-fancybox="gallery">
-                                    <img src="assets/img/educator-img15-500px.jpg" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="single-gallery">
-                            <figure class="gallery-img">
-                                <a href="assets/img/educator-img27.jpg" data-fancybox="gallery">
-                                    <img src="assets/img/educator-img27.jpg" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="single-gallery">
-                            <figure class="gallery-img">
-                                <a href="assets/img/educator-img28.jpg" data-fancybox="gallery">
-                                    <img src="assets/img/educator-img28.jpg" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="single-gallery">
-                            <figure class="gallery-img">
-                                <a href="assets/img/educator-img29.jpg" data-fancybox="gallery">
-                                    <img src="assets/img/educator-img29-300px.jpg" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="single-gallery">
-                            <figure class="gallery-img">
-                                <a href="assets/img/educator-img30.jpg" data-fancybox="gallery">
-                                    <img src="assets/img/educator-img30-300px.jpg" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="single-gallery">
-                            <figure class="gallery-img">
-                                <a href="assets/img/educator-img31.jpg" data-fancybox="gallery">
-                                    <img src="assets/img/educator-img31-300px.jpg" alt="">
-                                </a>
-                            </figure>
-                        </div>
+                        <?php $image_galley = get_field('image_gallery'); ?>
+                        <?php if($image_galley): ?>
+                            <?php foreach($image_galley as $image): ?>
+                                <div class="single-gallery">
+                                    <figure class="gallery-img">
+                                        <a href="<?php echo $image['url']; ?>" data-fancybox="gallery">
+                                            <img src="<?php echo $image['url']; ?>" alt="">
+                                        </a>
+                                    </figure>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

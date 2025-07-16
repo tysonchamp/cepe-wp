@@ -29,38 +29,27 @@
                                     <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/educator-logo1.png" alt="logo"></a>
                                 </div>
                                 <div class="textwidget widget-text">
-                                    Vero, tempor morbi, adipiscing aliqua nonummy proident perferendis? Laboris lacus quidem repellendus quasi.
+                                    <?php echo get_field('footer_texts','option'); ?>
                                 </div>
                             </aside>
                             <div class="footer-social-links">
                                 <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/" target="_blank">
-                                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.twitter.com/" target="_blank">
-                                            <i class="fab fa-twitter" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" target="_blank">
-                                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/" target="_blank">
-                                            <i class="fab fa-youtube" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
+                                    <?php if(have_rows('social_media_ac','option')): ?>
+                                        <?php while(have_rows('social_media_ac','option')): the_row(); ?>
+                                            <li>
+                                                <a href="<?php echo get_sub_field('social_media_url','option'); ?>" target="_blank">
+                                                    <?php echo get_sub_field('social_media_icon','option'); ?>
+                                                </a>
+                                            </li>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <aside class="widget">
                                 <h5 class="widget-title">Quick LInks</h5>
-                                <ul>
+                                <!-- <ul>
                                     <li>
                                         <a href="about.html">About us</a>
                                     </li>
@@ -73,26 +62,38 @@
                                     <li>
                                         <a href="legal-notice.html">Legal Notice</a>
                                     </li>
-                                </ul>
+                                </ul> -->
+
+                                <?php
+                                    wp_nav_menu( array(
+                                        'theme_location'    => 'footer_menu',
+                                        'container'     => '',
+                                        'menu_id' => false,
+                                        'menu_class'        => '', 
+                                        'echo'          => true,
+                                        'items_wrap'        => '<ul class="%2$s">%3$s</ul>',
+                                        'depth'         => 10,
+                                        'walker'        => new footer_nav_menu
+                                    ) );
+                                ?>
                             </aside>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <aside class="widget">
                                 <h5 class="widget-title">Support</h5>
-                                <ul>
-                                    <li>
-                                        <a href="faq.html">Help Center</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">Contact Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="product-cart.html">Payment Center</a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">Parent Community</a>
-                                    </li>
-                                </ul>
+                                
+                                <?php
+                                    wp_nav_menu( array(
+                                        'theme_location'    => 'footer_menu1',
+                                        'container'     => '',
+                                        'menu_id' => false,
+                                        'menu_class'        => '', 
+                                        'echo'          => true,
+                                        'items_wrap'        => '<ul class="%2$s">%3$s</ul>',
+                                        'depth'         => 10,
+                                        'walker'        => new footer_nav_menu
+                                    ) );
+                                ?>
                             </aside>
                         </div>
                         <div class="col-lg-3 col-md-6">
@@ -100,7 +101,7 @@
                                 <h5 class="widget-title">School Hours</h5>
                                 <span>
                                     <i aria-hidden="true" class="far fa-clock"></i>
-                                    8 AM - 5 PM , Monday - Saturday
+                                    <?php echo get_field('school_timeing','option'); ?>
                                 </span>
                                 <p>Aut, quae convallis minim cum ornare! Pede dictum convallis.</p>
                                 <a href="contact.html" class="button-round-secondary ">JOIN US NOW</a>
@@ -139,7 +140,7 @@
             <i class="fas fa-chevron-up"></i>
         </a>
         <!-- custom search field html -->
-        <div class="header-search-form">
+        <!-- <div class="header-search-form">
             <div class="container">
                 <div class="header-search-container">
                     <form class="search-form" role="search" method="get">
@@ -150,7 +151,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- JavaScript -->
     <script src="<?php echo get_template_directory_uri(); ?>/assets/vendors/jquery/jquery.js"></script>
