@@ -14,45 +14,46 @@ global $post;
 
 get_header();
 ?>
-    <?php $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
+        <?php $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
 
-    <section class="fluid-block inner-banner text-center py-5">
-        <div class="container">
-            <h1 class="fw-bold display-5"><?php the_title(); ?></h1>
-            <!-- <div class="col-lg-6 mx-auto">
-                <small class="fs-5 text-muted">Lorem ipsum dolor sit amet consectetur adipiscing elit sed <br>do eiusmod
-                    tempor incididunt ut labore</small>
-            </div> -->
-        </div>
-    </section>
-    <section class="main-content blog py-5">
-        <div class="container">
-            <div class="row col-lg-11 mx-auto">
-                <div class="col-lg-12 col-md-12">
-                    <div class="blog-section-wrap blog-details">
-                        <div class="blog-item">
-                            <?php if(have_posts()): ?>
-                                <?php while(have_posts()): the_post(); ?>
-                                    <?php if(has_post_thumbnail()): ?>
-                                        <div class="blog-image"><a href="#"><img src="<?php echo $featured_image[0]; ?>" alt=""></a></div>
-                                    <?php endif; ?>
-                                    <div class="blog-content">
-                                        <h3><a href="#"><?php the_title(); ?></a></h3>
-                                        <div class="blog-info">
-                                            <ul>
-                                                <!-- <li><strong>John Doe,</strong></li> -->
-                                                <!-- <li><?php the_date('F j, Y'); ?></li> -->
-                                            </ul>
-                                        </div>
-                                        <?php the_content(); ?>
-                                    </div>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
+        <!-- main part -->
+        <main id="content" class="site-main">
+            <!-- Inner Banner html start-->
+            <section class="inner-banner-wrap">
+                <div class="inner-baner-container" style="background-image: url(<?php echo $featured_image[0]; ?>);">
+                    <div class="container">
+                        <div class="inner-banner-content">
+                            <h1 class="inner-title"><?php the_title(); ?></h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Inner Banner html end-->
+            <!--  single blog html start -->
+            <div class="single-post-section">
+                <div class="single-post-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 primary right-sidebar">
+                                <!-- single blog post html start -->
+                                <figure class="feature-image">
+                                    <img src="<?php echo $featured_image[0]; ?>" alt="">
+                                </figure>
+                                <div class="single-content-wrap">
+                                    <!-- <h1 class="post-title"><?php the_title(); ?></h1> -->
+                                    <?php the_content(); ?>
+                                </div>
+                                <!-- divider line html -->
+                                <div class="divider-line">
+                                    <span class="st-line"></span>
+                                </div>
+                                <!-- blog post item html end -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+            <!--  single blog html end -->
+        </main>
+        
 <?php get_footer(); ?>
