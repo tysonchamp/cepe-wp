@@ -248,126 +248,57 @@ get_header();
                 </div>
             </section>
         <?php endif; ?>
-        <!-- home blog section html start -->
-        <section class="home-blog-section border-top">
-            <div class="container">
-                <div class="overlay-wrapper">
-                    <div class="pattern-overlay c-patten"></div>
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3">
-                            <div class="title-divider-center"></div>
-                            <h2 class="blog-section-title text-center">Our Latest Notice</h2>
-                            <!-- <p class="blog-section-info text-center">Saepe quo labore aenean dictumst expedita commodi auctor, nisl, lorem iusto feugiat nemo reiciendis laboris.</p> -->
+        <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 3,
+                'orderby' => 'date',
+                'order' => 'DESC'
+            );
+            $query = new WP_Query($args);
+        ?>
+        <?php if ($query->have_posts()) { ?>
+            <!-- home blog section html start -->
+            <section class="home-blog-section border-top">
+                <div class="container">
+                    <div class="overlay-wrapper">
+                        <div class="pattern-overlay c-patten"></div>
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-3">
+                                <div class="title-divider-center"></div>
+                                <h2 class="blog-section-title text-center">Our Latest Publications</h2>
+                                <!-- <p class="blog-section-info text-center">Saepe quo labore aenean dictumst expedita commodi auctor, nisl, lorem iusto feugiat nemo reiciendis laboris.</p> -->
+                            </div>
                         </div>
-                    </div>
-                    <div class="inner-blog-wrap">
-                        <?php
-                            $args = array(
-                                'post_type' => 'post',
-                                'posts_per_page' => 3,
-                                'orderby' => 'date',
-                                'order' => 'DESC'
-                            );
-                            $query = new WP_Query($args);
-                            if ($query->have_posts()) {
+                        <div class="inner-blog-wrap">
+                            <?php
                                 while ($query->have_posts()) {
                                     $query->the_post();
-                        ?>
-                                <article class="post">
-                                    <figure class="feature-image">
-                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-                                        <!-- <span class="cat-meta">
-                                            <a href="blog-archive.html">EDUCATION</a>
-                                        </span> -->
-                                    </figure>
-                                    <div class="entry-content">
-                                        <h4>
-                                            <a href="<?php the_permalink(); ?>">
-                                                <?php the_title(); ?>
-                                            </a>
-                                        </h4>
-                                        <p class="blog-info">
-                                            <?php the_excerpt(); ?>
-                                        </p>
-                                    </div>
-                                </article>
-                        <?php
-                                }
-                            }
-                        ?>
+                            ?>
+                                    <article class="post">
+                                        <figure class="feature-image">
+                                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                                            <!-- <span class="cat-meta">
+                                                <a href="blog-archive.html">EDUCATION</a>
+                                            </span> -->
+                                        </figure>
+                                        <div class="entry-content">
+                                            <h4>
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <?php the_title(); ?>
+                                                </a>
+                                            </h4>
+                                            <p class="blog-info">
+                                                <?php the_excerpt(); ?>
+                                            </p>
+                                        </div>
+                                    </article>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- home slider section html start -->
-        <!-- <div class="slider-section about-slider border-top">
-            <div class="container">
-                <div class="title-divider-center"></div>
-                <h2 class="about-title text-center mb-5">At vero eos et accusamus</h2>
-                <div class="client-slider text-center">
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img16.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img17.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img18.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img19.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img20.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img18.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img16.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img17.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img18.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img19.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img20.png" alt="">
-                        </figure>
-                    </div>
-                    <div class="client-item">
-                        <figure>
-                            <img src="assets/img/educator-img18.png" alt="">
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+            </section>
+        <?php } ?>
     </main>
     
 <?php get_footer(); ?>

@@ -9756,3 +9756,13 @@ input[type=text], input[type=email], input[type=url], input[type=password], inpu
   .commitee ol li{ width:100%; }
 }
 .goal-title{ font-size: 36px !important;}
+
+/* Download CSS */
+.download-wrap .card{ border-radius: 25px; min-height: 450px;}
+.download-wrap .card tr td:first-child, .download-wrap .card tr th:first-child{ border-left: 0 !important; font-weight: bold;}
+.download-wrap .card tr td:last-child, .download-wrap .card tr th:last-child{ border-right: 0 !important;}
+.download-wrap .card tr th{ background: #fff !important; border-bottom: solid 2px #e6e6e6;}
+.download-wrap .card tr:hover td{ background: #f9f9f9;}
+.download-wrap .card tr:nth-child(odd) td{ background: #f9f9f9;}
+.download-wrap .btn-primary{ background: #0E9648 !important; border-color: #0E9648 !important; color: #fff !important; box-shadow: none !important;}
+.download-wrap .btn-primary:hover{ background: #108638 !important;}
