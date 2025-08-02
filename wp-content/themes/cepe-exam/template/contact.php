@@ -13,7 +13,11 @@ get_header('inner');
         <main id="content" class="site-main">
             <!-- Inner Banner html start-->
             <section class="inner-banner-wrap">
-                <div class="inner-baner-container" style="background-image: url(<?php echo $featured_image[0]; ?>);">
+                <?php if(!empty($featured_image[0])): ?>
+                    <div class="inner-baner-container" style="background-image: url(<?php echo $featured_image[0]; ?>);">
+                <?php else: ?>
+                    <div class="inner-baner-container" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/banner.webp);">
+                <?php endif; ?>
                     <div class="container">
                         <div class="inner-banner-content">
                             <h1 class="inner-title"><?php the_title(); ?></h1>

@@ -1,7 +1,7 @@
         <!-- footer part -->
         <footer id="colophon" class="site-footer">
             <div class="footer-overlay"></div>
-            <div class="subscribe-section">
+            <!-- <div class="subscribe-section">
                 <div class="container">
                     <div class="subscribe-content">
                         <div class="overlay"></div>
@@ -19,14 +19,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="top-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-5 col-md-6">
                             <aside class="widget widget_text img-textwidget">
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/educator-logo1.png" alt="logo"></a>
+                                    <a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"></a>
                                 </div>
                                 <div class="textwidget widget-text">
                                     <?php echo get_field('footer_texts','option'); ?>
@@ -46,24 +46,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-2 col-md-6">
                             <aside class="widget">
-                                <h5 class="widget-title">Quick LInks</h5>
-                                <!-- <ul>
-                                    <li>
-                                        <a href="about.html">About us</a>
-                                    </li>
-                                    <li>
-                                        <a href="career.html">Careers</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-blog.html">News & Articles</a>
-                                    </li>
-                                    <li>
-                                        <a href="legal-notice.html">Legal Notice</a>
-                                    </li>
-                                </ul> -->
-
+                                <h5 class="widget-title">CEPE</h5>
                                 <?php
                                     wp_nav_menu( array(
                                         'theme_location'    => 'footer_menu',
@@ -80,7 +65,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <aside class="widget">
-                                <h5 class="widget-title">Support</h5>
+                                <h5 class="widget-title">History</h5>
                                 
                                 <?php
                                     wp_nav_menu( array(
@@ -96,15 +81,22 @@
                                 ?>
                             </aside>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <aside class="widget widget_text school-time">
-                                <h5 class="widget-title">School Hours</h5>
-                                <span>
-                                    <i aria-hidden="true" class="far fa-clock"></i>
-                                    <?php echo get_field('school_timeing','option'); ?>
-                                </span>
-                                <p>Aut, quae convallis minim cum ornare! Pede dictum convallis.</p>
-                                <a href="contact.html" class="button-round-secondary ">JOIN US NOW</a>
+                        <div class="col-lg-2 col-md-6">
+                            <aside class="widget">
+                                <h5 class="widget-title">Quick Links</h5>
+                                
+                                <?php
+                                    wp_nav_menu( array(
+                                        'theme_location'    => 'footer_menu3',
+                                        'container'     => '',
+                                        'menu_id' => false,
+                                        'menu_class'        => '', 
+                                        'echo'          => true,
+                                        'items_wrap'        => '<ul class="%2$s">%3$s</ul>',
+                                        'depth'         => 10,
+                                        'walker'        => new footer_nav_menu
+                                    ) );
+                                ?>
                             </aside>
                         </div>
                     </div>
@@ -114,11 +106,11 @@
                 <div class="bottom-footer">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="copy-right">Copyright &copy; 2023 Educator. All rights reserved.</div>
+                            <div class="copy-right">Copyright &copy; 2025 CEPE. All rights reserved.</div>
                         </div>
                         <div class="col-md-6">
                             <div class="legal-list">
-                                <ul>
+                                <!-- <ul>
                                     <li>
                                         <a href="legal-notice.html">PRIVACY POLICY</a>
                                     </li>
@@ -128,7 +120,7 @@
                                     <li>
                                         <a href="legal-notice.html">TERMS & CONDITION</a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>

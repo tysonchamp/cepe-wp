@@ -40,18 +40,18 @@ get_header();
                                     <img src="<?php echo $featured_image[0]; ?>" alt="">
                                 </figure>
                                 <div class="single-content-wrap">
-                                    <h1 class="post-title"><?php the_title(); ?></h1>
+                                    <h3 class="post-title"><?php the_title(); ?></h3>
                                     <?php the_content(); ?>
                                 </div>
-                                <div class="meta-wrap">
+                                <!-- <div class="meta-wrap">
                                     <div class="tag-links">
                                         <?php the_tags(); ?>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- divider line html -->
-                                <div class="divider-line">
+                                <!-- <div class="divider-line">
                                     <span class="st-line"></span>
-                                </div>
+                                </div> -->
                                 <!-- blog post item html end -->
                             </div>
                             <div class="col-lg-4 secondary">

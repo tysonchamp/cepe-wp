@@ -11,7 +11,11 @@ get_header();
         <main id="content" class="site-main">
             <!-- Inner Banner html start-->
             <section class="inner-banner-wrap">
-                <div class="inner-baner-container" style="background-image: url(<?php echo $featured_image[0]; ?>);">
+                <?php if(!empty($featured_image[0])): ?>
+                    <div class="inner-baner-container" style="background-image: url(<?php echo $featured_image[0]; ?>);">
+                <?php else: ?>
+                    <div class="inner-baner-container" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/banner.webp);">
+                <?php endif; ?>
                     <div class="container">
                         <div class="inner-banner-content">
                             <h1 class="inner-title"><?php the_title(); ?></h1>
@@ -21,10 +25,10 @@ get_header();
             </section>
             <!-- Inner Banner html end-->
             <!-- gallery page html start -->
-            <div class="gallery-section">
+            <div class="gallery-section mt-4">
                 <div class="container">
                     <div class="gallery-container">
-                        <?php $image_galley = get_field('image_gallery'); ?>
+                        <?php $image_galley = get_field('image_galley'); ?>
                         <?php if($image_galley): ?>
                             <?php foreach($image_galley as $image): ?>
                                 <div class="single-gallery">

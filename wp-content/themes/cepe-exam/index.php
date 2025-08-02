@@ -21,7 +21,7 @@ get_header(); ?>
                 <div class="inner-baner-container" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/educator-img12.jpg);">
                     <div class="container">
                         <div class="inner-banner-content">
-                            <h1 class="inner-title">Latest News</h1>
+                            <h1 class="inner-title">Notice Board</h1>
                         </div>
                     </div>
                 </div>
@@ -39,9 +39,7 @@ get_header(); ?>
                                             <article class="post">
                                                 <figure class="feature-image">
                                                     <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-                                                    <span class="cat-meta">
-                                                        <a href="<?php the_permalink(); ?>"><?php the_category_list(', '); ?></a>
-                                                    </span>
+                                                    
                                                 </figure>
                                                 <div class="entry-content">
                                                     <h4>

@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /*
-	[Master Stylesheet]
-	Template Name: Educator
-	Description: educator is an expressive, virtuous, Responsive, user friendly and powerful HTML 5 Template.This template was built in Bootstrap 5, HTML5 and CSS3.
-	Author: Bosa Themes
-	Author URI: https://themeforest.net/user/bosathemes
-	Version: 1.0.1
-	Primary use: Education
+  [Master Stylesheet]
+  Template Name: Educator
+  Description: educator is an expressive, virtuous, Responsive, user friendly and powerful HTML 5 Template.This template was built in Bootstrap 5, HTML5 and CSS3.
+  Author: Bosa Themes
+  Author URI: https://themeforest.net/user/bosathemes
+  Version: 1.0.1
+  Primary use: Education
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -20,45 +20,45 @@
 7. Clearing
 8. Main Header
 9. Home front section
-	* Home banner section
-	* Home About section  
-	* Home Blog section  
-	* Home Contact section  
-	* Home Course section  
-	* Home Fact section  
-	* Home Feature section  
-	* Home Goal section  
-	* Home Progress section  
-	* Home Service section  
-	* Home Team section  
-	* Home Testimonial section  
+  * Home banner section
+  * Home About section  
+  * Home Blog section  
+  * Home Contact section  
+  * Home Course section  
+  * Home Fact section  
+  * Home Feature section  
+  * Home Goal section  
+  * Home Progress section  
+  * Home Service section  
+  * Home Team section  
+  * Home Testimonial section  
 10. main Footer
 11. pages
-	* 404 Pages
-	* About Pages
-	* Blog Archive Pages
-	* Blog Single Pages
-	* Career Pages
-	* Career Detail Pages
-	* Categories page
-	* Comming Soon Pages
-	* Contact Pages
-	* FAQ Pages
-	* Feature-course-page
-	* Gallery Pages
-	* Legal Notic pages
-	* Portfolio detail pages
-	* Product pages
-	* Single Pages
-	* Search Pages
-	* Team Detail Page
-	* Team page
-	* Testimonial Pages
-	* Shop Pages
-		*Product Right
-		*Product Detail
-		*Product Cart 
-		*Product Checkout
+  * 404 Pages
+  * About Pages
+  * Blog Archive Pages
+  * Blog Single Pages
+  * Career Pages
+  * Career Detail Pages
+  * Categories page
+  * Comming Soon Pages
+  * Contact Pages
+  * FAQ Pages
+  * Feature-course-page
+  * Gallery Pages
+  * Legal Notic pages
+  * Portfolio detail pages
+  * Product pages
+  * Single Pages
+  * Search Pages
+  * Team Detail Page
+  * Team page
+  * Testimonial Pages
+  * Shop Pages
+    *Product Right
+    *Product Detail
+    *Product Cart 
+    *Product Checkout
 12. compatibility
     * Widget Siderbar
 
@@ -2861,20 +2861,20 @@ input[type=submit]:focus {
   }
 }
 .home-banner .image-overlay {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   opacity: 0.1;
   background-repeat: no-repeat;
   background-position: top right;
 }
 .home-banner .image-overlay-oval {
-  background-image: url(assets/img/educator-img2.png);
+  background-image: url(img/educator-img2.png);
   opacity: 0.8;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 190px !important;
   background-size: contain;
 }
 .home-banner .overlay-image {
-  background-image: url(assets/img/educator-img5.png);
+  background-image: url(img/educator-img5.png);
   opacity: 0.5;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -2896,7 +2896,7 @@ input[type=submit]:focus {
   }
 }
 .home-service .pattern-overlay {
-  background-image: url(assets/img/educator-img5.png);
+  background-image: url(img/educator-img5.png);
   background-size: 11% auto;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -2907,7 +2907,7 @@ input[type=submit]:focus {
   z-index: 1;
 }
 .home-service .service-wrapper .pattern-circle {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: center center;
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -3024,7 +3024,7 @@ input[type=submit]:focus {
   }
 }
 .home-about-us .pattern-overlay {
-  background-image: url(assets/img/educator-img3.png);
+  background-image: url(img/educator-img3.png);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 17% auto;
@@ -3143,7 +3143,7 @@ input[type=submit]:focus {
 >>> Home progress section  
 ----------------------------------------------------------------*/
 .home-progress-section {
-  background-image: url(assets/img/educator-img12.jpg);
+  background-image: url(img/educator-img12.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3273,7 +3273,7 @@ input[type=submit]:focus {
   z-index: 1;
 }
 .home-team-section .container .overlay {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 15% auto;
@@ -3351,7 +3351,7 @@ input[type=submit]:focus {
 ----------------------------------------------------------------*/
 .home-fact-section {
   margin-bottom: 130px;
-  background-image: url(assets/img/educator-img12.jpg);
+  background-image: url(img/educator-img12.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -3477,13 +3477,13 @@ input[type=submit]:focus {
   }
 }
 .home-fact-section .fact-right-inner-wrap .fact-inner-box .fact-content .circle-patten {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: top center;
   background-repeat: no-repeat;
   opacity: 0.3;
 }
 .home-fact-section .fact-right-inner-wrap .fact-inner-box .fact-content .circle-c-patten {
-  background-image: url(assets/img/educator-img3.png);
+  background-image: url(img/educator-img3.png);
   background-position: top right;
   background-repeat: no-repeat;
   opacity: 0.3;
@@ -3516,11 +3516,11 @@ input[type=submit]:focus {
   }
 }
 .home-fact-section .fact-right-inner-wrap .fact-inner-box .top-right-image {
-  background-image: url(assets/img/educator-img27.jpg);
+  background-image: url(img/educator-img27.jpg);
   background-position: center right;
 }
 .home-fact-section .fact-right-inner-wrap .fact-inner-box .bottom-left-image {
-  background-image: url(assets/img/educator-img28.jpg);
+  background-image: url(img/educator-img28.jpg);
   background-position: center left;
 }
 .home-fact-section .fact-right-inner-wrap .fact-inner-box .bottom-right-content {
@@ -3574,7 +3574,7 @@ input[type=submit]:focus {
   padding: 50px;
   border-radius: 25px;
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
-  /* background-image: url(assets/img/educator-img1.png); */
+  /* background-image: url(img/educator-img1.png); */
   background-position: 32% 70%;
   background-repeat: no-repeat;
   position: relative;
@@ -3605,7 +3605,7 @@ input[type=submit]:focus {
   }
 }
 .home-testimonial-section .client-content .circle-patten {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: bottom left;
   background-repeat: no-repeat;
   opacity: 0.15;
@@ -3681,7 +3681,7 @@ input[type=submit]:focus {
   z-index: 1;
 }
 .home-blog-section .overlay-wrapper .c-patten {
-  background-image: url(assets/img/educator-img3.png);
+  background-image: url(img/educator-img3.png);
   background-position: 100% 15%;
   background-repeat: no-repeat;
   opacity: 0.3;
@@ -3944,7 +3944,7 @@ input[type=submit]:focus {
   }
 }
 .home-goal-section .goal-content .pattern-overlay {
-  background-image: url(assets/img/educator-img7.png);
+  background-image: url(img/educator-img7.png);
   background-position: bottom right;
   background-repeat: no-repeat;
   opacity: 0.3;
@@ -3970,13 +3970,13 @@ input[type=submit]:focus {
   z-index: 1;
 }
 .home-course-section .overlay-wrapper .pattern-overlay {
-  background-image: url(assets/img/educator-img6.png);
+  background-image: url(img/educator-img6.png);
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 12% auto;
 }
 .home-course-section .overlay-wrapper .overlay-circle {
-  background-image: url(assets/img/educator-img3.png);
+  background-image: url(img/educator-img3.png);
   background-repeat: no-repeat;
   background-position: 100% 10%;
   opacity: 0.4;
@@ -4145,7 +4145,7 @@ input[type=submit]:focus {
 >>> Main Footer  
 ----------------------------------------------------------------*/
 .site-footer {
-  background-image: url(assets/img/educator-img12.jpg);
+  background-image: url(img/educator-img12.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
@@ -4523,7 +4523,7 @@ input[type=submit]:focus {
   z-index: 1;
 }
 .course-result-section .left-content .zigzag-patten {
-  background-image: url(assets/img/educator-img5.png);
+  background-image: url(img/educator-img5.png);
   background-position: calc(100% - 50px) 100%;
   background-repeat: no-repeat;
   background-size: 22% auto;
@@ -4578,13 +4578,13 @@ input[type=submit]:focus {
   z-index: 1;
 }
 .course-result-section .feature-right-content .c-patten {
-  background-image: url(assets/img/educator-img3.png);
+  background-image: url(img/educator-img3.png);
   background-position: top left;
   background-repeat: no-repeat;
   opacity: 0.5;
 }
 .course-result-section .feature-right-content .circle-patten {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: 100% 98%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -5643,7 +5643,7 @@ input[type=submit]:focus {
   }
 }
 .team-detail-section .zigzag-patten {
-  background-image: url(assets/img/educator-img5.png);
+  background-image: url(img/educator-img5.png);
   background-position: 100% 43%;
   background-repeat: no-repeat;
   background-size: 12% auto;
@@ -5710,7 +5710,7 @@ input[type=submit]:focus {
   }
 }
 .team-detail-section .author-bio-date .c-patten {
-  background-image: url(assets/img/educator-img3.png);
+  background-image: url(img/educator-img3.png);
   background-position: top center;
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -5801,7 +5801,7 @@ input[type=submit]:focus {
   z-index: 1;
 }
 .team-detail-section .experience-wrappered .c-patten {
-  background-image: url(assets/img/educator-img3.png);
+  background-image: url(img/educator-img3.png);
   background-position: center bottom;
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -5960,13 +5960,13 @@ input[type=submit]:focus {
   z-index: 1;
 }
 .vacancy-content .zigzag-patten {
-  background-image: url(assets/img/educator-img5.png);
+  background-image: url(img/educator-img5.png);
   background-position: bottom right;
   background-repeat: no-repeat;
   opacity: 0.2;
 }
 .vacancy-content .c-patten {
-  background-image: url(assets/img/educator-img3.png);
+  background-image: url(img/educator-img3.png);
   background-position: bottom right;
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -6002,7 +6002,7 @@ input[type=submit]:focus {
   }
 }
 .about-service-wrap .circle-patten {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: center right;
   background-repeat: no-repeat;
   opacity: 0.3;
@@ -6283,7 +6283,7 @@ input[type=submit]:focus {
   }
 }
 .course-detail-section .circle-patten {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: bottom right;
   background-repeat: no-repeat;
   opacity: 0.7;
@@ -6612,7 +6612,7 @@ input[type=submit]:focus {
   /* Firefox */
 }
 .qsn-form-container .zigzag-patten {
-  background-image: url(assets/img/educator-img5.png);
+  background-image: url(img/educator-img5.png);
   background-position: bottom right;
   background-repeat: no-repeat;
   opacity: 0.3;
@@ -6684,13 +6684,13 @@ input[type=submit]:focus {
   z-index: 1;
 }
 .faq-testimonial .faq-image .c-patten {
-  background-image: url(assets/img/educator-img3.png);
+  background-image: url(img/educator-img3.png);
   background-position: top left;
   background-repeat: no-repeat;
   opacity: 0.3;
 }
 .faq-testimonial .faq-image .circle-patten {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: center right;
   background-repeat: no-repeat;
   opacity: 0.8;
@@ -6910,7 +6910,7 @@ input[type=submit]:focus {
 }
 
 .circle-patten {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: 20% 110px;
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -6922,7 +6922,7 @@ input[type=submit]:focus {
   z-index: 2;
 }
 .no-content-wrap .zigzag-patten {
-  background-image: url(assets/img/educator-img5.png);
+  background-image: url(img/educator-img5.png);
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 15% auto;
@@ -7220,7 +7220,7 @@ input[type=submit]:focus {
   margin-top: 100px;
 }
 .contact-page-section .contact-form-inner .zigzag-patten {
-  background-image: url(assets/img/educator-img5.png);
+  background-image: url(img/educator-img5.png);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 20% auto;
@@ -7306,7 +7306,7 @@ input[type=submit]:focus {
   }
 }
 .contact-page-section .contact-form-inner .contact-from-wrap .circle-patten {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: bottom right;
   background-repeat: no-repeat;
   opacity: 0.5;
@@ -8395,7 +8395,7 @@ product slider range for price css
   }
 }
 .categories-section .pattern-overlay {
-  background-image: url(assets/img/educator-img5.png);
+  background-image: url(img/educator-img5.png);
   background-size: 11% auto;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -8406,7 +8406,7 @@ product slider range for price css
   z-index: 1;
 }
 .categories-section .service-wrapper .pattern-circle {
-  background-image: url(assets/img/educator-img4.png);
+  background-image: url(img/educator-img4.png);
   background-position: center center;
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -9699,11 +9699,60 @@ product slider range for price css
 .content-item{ margin-bottom: 100px;}
 
 
+/*------------- Final Update ---------------*/
+.single-post-inner h3{ margin:50px 0 20px; }
+.single-post-inner p, .single-post-inner .single-post-inner span, .single-post-inner li{ font-size:1.1rem; }
+.single-post-inner h2{ color:#41246D !important; }
+.inner-banner-wrap{ margin-bottom: 0 !important; }
+.contact-page-section{ padding: 0 0 100px 0 !important; }
+.site-identity img{ max-width: 150px; }
+.home-about-us{ padding:100px 0; }
+.home-fact-section{ padding:100px 0; }
+.home-feature-section .feature-wrapper .feature-type .feature-icon .meta-no{ top: -35px; }
+.home-goal-section .inner-goal-image .video-play-image{ min-height:442px; }
+.site-footer .footer-logo{ max-width:200px; }
+.home-about-us .about-left-content .regarding-us .qulifaction-content .qualification-tag .qualifaction-icon img{ max-width:45px;}
+.home-about-us .about-left-content{ margin-right: 0 !important;}
+.home-about-us .about-left-content .regarding-us .qulifaction-content .qualification-tag .qualifaction-title h5{ font-size:16px; }
+.home-goal-section .inner-goal-image .video-play-image .video-button a{ color:#fff; }
+.home-goal-section .goal-content{ min-height:442px; }
+.testimonial-section-title, .blog-section-title{ margin-bottom:50px; }
+.site-footer .footer-social-links ul li a{ width:40px; height:40px; display:flex; align-items:center; justify-content:center;}
+.site-footer .footer-social-links ul li a .svg-inline--fa{ height: 1.5em; }
+input[type=text], input[type=email], input[type=url], input[type=password], input[type=search], input[type=number], input[type=tel], input[type=range], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color], textarea{ background-color:#f4f4f4; }
+.contact-page-section .contact-form-inner .contact-from-wrap .circle-patten{ display:none; }
+.awards-wrap .wp-block-image{ max-width:100px; margin:auto; margin-bottom: 20px;}
+.awards-wrap .wp-block-image img{ width:100%; }
+.single-post-section .divider-line{ display:none; }
+.single-post-section{ margin-bottom: 0;}
+.single-post-inner{ padding:100px 0; }
+.single-post-section .single-content-wrap p{ line-height:1.8; margin-bottom:25px; }
+.wp-block-heading{ margin-bottom:50px; }
+.awards-wrap .wp-block-heading{ margin-bottom:10px !important; font-weight: 600 !important;}
+.home-blog-section .feature-image{ aspect-ratio:4/3 !important; overflow:hidden; }
 
+.registration-section{ padding:70px 0 !important; display: inline-block; width: 100%;}
+.registration-section .card{ border-radius:1rem !important; overflow: hidden;}
+.registration-section .card-body{ padding:2rem !important; }
+.registration-section .card-header h4{ padding:0 !important; margin: 0 !important;}
+.registration-section .card-header h4{ padding:0 !important; margin: 0 !important;}
+.registration-section .card-header{ padding: 1.5rem;}
+.registration-section .btn-primary{ background:#F24080 !important; border-color: #F24080 !important; box-shadow: none !important;}
+.registration-section .form-control{ border-radius:8px !important; }
+.registration-section .border{ border-radius:8px !important; overflow: hidden;}
+.single-post-section{ min-height:700px; }
+.home-about-us .pattern-overlay{ display:none; }
+.home-testimonial-section .client-content .author-content{ align-items:center !important; }
+.site-footer .footer-logo{ max-width:180px; }
+.site-footer .footer-logo img{ width:100%; }
+.site-footer{ padding-top:50px; }
 
+.commitee ol{ display:flex; flex-wrap:wrap; justify-content: center; width: 100%; gap: 2rem; box-sizing: border-box; margin: 0; padding: 0; list-style: none !important;  counter-reset: committee-item;}
+.commitee ol li{ width:30%; box-shadow: 0 5px 15px -5px rgba(0,0,0,.05); border-radius: 15px; box-sizing: border-box; padding: 1.5rem; text-align: center; margin-bottom: 1.5rem; border: solid 1px #e8e8e8; min-height: 160px; position: relative; column-count: auto; padding-top: 3rem;}
+.commitee ol li:before{ position: absolute; content: '0'; width: 45px; height: 45px; border-radius: 100%; display: flex; align-items: center; justify-content: center; background: #F24080; color: #fff; top: -20px; right: 0; left: 0; margin: auto; counter-increment: committee-item; content: counter(committee-item);}
 
-
-
-
-
-
+@media only screen and (max-width: 767px) {
+  .commitee ol{ flex-direction: column;}
+  .commitee ol li{ width:100%; }
+}
+.goal-title{ font-size: 36px !important;}

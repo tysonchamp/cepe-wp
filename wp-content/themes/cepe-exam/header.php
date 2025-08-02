@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/vendors/bootstrap/css/bootstrap.min.css" media="all">
     <!-- Fonts Awesome CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/vendors/fontawesome/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Elmentkit Icon CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/vendors/elementskit-icon-pack/assets/css/ekiticons.css">
     <!-- progress bar CSS -->
@@ -72,14 +73,6 @@
                             </div>
                         </div>
                         <div class="col-lg-4 d-flex justify-content-lg-end justify-content-between">
-                            <!-- <ul class="nav-links d-flex align-items-center gap-3 mb-0">
-                                <li><a href="#" class="text-white">Notice</a></li>
-                                <li><a href="gallery.html" class="text-white">Events</a></li>
-                                <li><a href="#" class="text-white">Download</a></li>
-                                <li><a href="#" class="text-white">Publication</a></li>
-                                <li><a href="contact.html" class="text-white">Contact</a></li>
-                                <li><a href="blog-archive.html" class="text-white">Blog</a></li>
-                            </ul> -->
                             <?php
                                 wp_nav_menu( array(
                                     'theme_location'    => 'top_menu',
@@ -108,73 +101,6 @@
                         </div>
                         <div class="main-navigation col-lg-10 justify-content-between d-flex align-items-center">
                             <nav id="navigation" class="navigation d-none d-lg-inline-block">
-                                <!-- <ul>
-                                    <li class="menu-item-has-children">
-                                        <a href="about.html">About CEPE</a>
-                                        <ul>
-                                            <li>
-                                                <a href="#">History</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">President, French Advisory Communitee</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Secretaries, French Advisory Communitee</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Convenor, IAA - India</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="">
-                                        <a href="#">Committee</a>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">History</a>
-                                        <ul>
-                                            <li>
-                                                <a href="#">History of Chandannagar</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">History of CMC</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">History of KLVB</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">History of IAA</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">CEPE Exam</a>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Syllabus</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Previous Year Question Paper</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Lorem dolor</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Affiliates</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Announcement</a>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Awards</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Awards</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul> -->
                                 <?php
                                     wp_nav_menu( array(
                                         'theme_location'    => 'main_menu',
@@ -189,7 +115,7 @@
                                 ?>
                             </nav>
                             <div class="header-btn d-inline-block">
-                                <a href="#" class="button-round-secondary">Online Form Fillup</a>
+                                <a href="https://cepe.org.in/exam-registration/public/registration/create" class="button-round-secondary">Online Form Fillup</a>
                             </div>
                         </div>
                     </div>

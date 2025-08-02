@@ -421,6 +421,7 @@ function td_setup() {
 		'main_menu' => 'Main Menu',
 		'footer_menu' => 'Footer Menu',
 		'footer_menu1' => 'Footer Menu 1',
+		'footer_menu3' => 'Footer Menu 2',
 		// 'service_menu' => 'Service Page Menu',
 	) );
 }

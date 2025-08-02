@@ -56,7 +56,7 @@ get_header();
                                             <div class="qulifaction-content left-content col-lg-6 mb-3">
                                                 <div class="qualification-tag">
                                                     <div class="qualifaction-icon">
-                                                        <?php echo get_sub_field('section_1_icon'); ?>
+                                                        <img src="<?php echo get_sub_field('section_1_icon'); ?>" />
                                                     </div>
                                                     <div class="qualifaction-title">
                                                         <h5>
@@ -75,7 +75,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="about-btn">
-                                <a href="about.html" class="button-round-secondary">MORE ABOUT US</a>
+                                <!-- <a href="about.html" class="button-round-secondary">MORE ABOUT US</a> -->
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@ get_header();
                                 </ul>
                             </div> -->
                             <div class="service-btn">
-                                <a href="contact.html" class="button-round-secondary">JOIN US NOW</a>
+                                <a href="<?php echo get_page_link(98); ?>" class="button-round-secondary">MORE ABOUT US</a>
                             </div>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ get_header();
                                 </div>
                                 <h4 class="feature-heading"><?php echo get_sub_field('section_4_title'); ?></h4>
                                 <p class="feature-info"><?php echo get_sub_field('section_4_texts'); ?></p>
-                                <a href="#" class="right-arrow-link">
+                                <a class="right-arrow-link">
                                     <i aria-hidden="true" class="icon icon-right-arrow"></i>
                                 </a>
                             </div>
@@ -210,44 +210,44 @@ get_header();
                 </div>
             </div>
         </div>
-        <!-- home testimonial section html start -->
-        <section class="home-testimonial-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3">
-                        <div class="title-divider-center"></div>
-                        <h2 class="testimonial-section-title text-center">Review's From Students</h2>
-                        <!-- <p class="testimonial-section-info text-center">Saepe quo labore aenean dictumst expedita commodi auctor, nisl, lorem iusto feugiat nemo reiciendis laboris.</p> -->
+        <?php if(have_rows('all_feedbacks','option')): ?>
+            <!-- home testimonial section html start -->
+            <section class="home-testimonial-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3">
+                            <div class="title-divider-center"></div>
+                            <h2 class="testimonial-section-title text-center">Review's From Students</h2>
+                            <!-- <p class="testimonial-section-info text-center">Saepe quo labore aenean dictumst expedita commodi auctor, nisl, lorem iusto feugiat nemo reiciendis laboris.</p> -->
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <?php if(have_rows('all_feedbacks')): ?>
-                        <?php while(have_rows('all_feedbacks')): the_row(); ?>
+                    <div class="row">
+                        <?php while(have_rows('all_feedbacks','option')): the_row(); ?>
                             <div class="col-md-6">
                                 <div class="client-content left-content">
                                     <div class="pattern-overlay circle-patten"></div>
                                     <p class="client-review">
-                                        <?php echo get_sub_field('feedback_texts'); ?>
+                                        <?php echo get_sub_field('feedback_texts','option'); ?>
                                     </p>
                                     <div class="author-content">
                                         <div class="author-info">
-                                            <h5 class="author-name"><?php echo get_sub_field('person_name'); ?></h5>
-                                            <span class="author-title"><?php echo get_sub_field('designation'); ?></span>
+                                            <h5 class="author-name"><?php echo get_sub_field('person_name','option'); ?></h5>
+                                            <span class="author-title"><?php echo get_sub_field('designation','option'); ?></span>
                                         </div>
                                         <figure class="author-img">
-                                            <img src="<?php echo get_sub_field('feedback_image'); ?>" alt="">
+                                            <img src="<?php echo get_sub_field('feedback_image','option'); ?>" alt="">
                                         </figure>
                                     </div>
                                 </div>
                             </div>
                         <?php endwhile; ?>
-                    <?php endif; ?>
+                    </div>
+                    <div class="testimonial-btn text-center">
+                        <!-- <a href="testimonial.html" class="button-round-primary">MORE REVIEWS NOW</a> -->
+                    </div>
                 </div>
-                <div class="testimonial-btn text-center">
-                    <!-- <a href="testimonial.html" class="button-round-primary">MORE REVIEWS NOW</a> -->
-                </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
         <!-- home blog section html start -->
         <section class="home-blog-section border-top">
             <div class="container">
@@ -256,7 +256,7 @@ get_header();
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3">
                             <div class="title-divider-center"></div>
-                            <h2 class="blog-section-title text-center">Our Latest News</h2>
+                            <h2 class="blog-section-title text-center">Our Latest Notice</h2>
                             <!-- <p class="blog-section-info text-center">Saepe quo labore aenean dictumst expedita commodi auctor, nisl, lorem iusto feugiat nemo reiciendis laboris.</p> -->
                         </div>
                     </div>

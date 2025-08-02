@@ -20,7 +20,11 @@ get_header();
         <main id="content" class="site-main">
             <!-- Inner Banner html start-->
             <section class="inner-banner-wrap">
-                <div class="inner-baner-container" style="background-image: url(<?php echo $featured_image[0]; ?>);">
+                <?php if(!empty($featured_image[0])): ?>
+                    <div class="inner-baner-container" style="background-image: url(<?php echo $featured_image[0]; ?>);">
+                <?php else: ?>
+                    <div class="inner-baner-container" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/banner.webp);">
+                <?php endif; ?>
                     <div class="container">
                         <div class="inner-banner-content">
                             <h1 class="inner-title"><?php the_title(); ?></h1>
@@ -36,9 +40,9 @@ get_header();
                         <div class="row">
                             <div class="col-lg-12 primary right-sidebar">
                                 <!-- single blog post html start -->
-                                <figure class="feature-image">
+<!--                                 <figure class="feature-image">
                                     <img src="<?php echo $featured_image[0]; ?>" alt="">
-                                </figure>
+                                </figure> -->
                                 <div class="single-content-wrap">
                                     <!-- <h1 class="post-title"><?php the_title(); ?></h1> -->
                                     <?php the_content(); ?>
